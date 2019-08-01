@@ -1,5 +1,5 @@
 ﻿namespace Lab2.Interfaces.ConsoleApp {
-    public interface IDisplay {
+    public interface IDisplay : INamedClass {
         void Display(object data);
     }
 }

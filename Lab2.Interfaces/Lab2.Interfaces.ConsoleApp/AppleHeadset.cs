@@ -1,9 +1,14 @@
-﻿using System;
-
-namespace Lab2.Interfaces.ConsoleApp {
+﻿namespace Lab2.Interfaces.ConsoleApp {
     public class AppleHeadset : IPlayback {
+
+        private readonly IOutput Output;
+
+        public AppleHeadset(IOutput output) {
+            Output = output;
+        }
+
         public void Play(object data) {
-            Console.WriteLine($"{Name()} sound");
+            Output.WriteLine($"{Name()} sound");
         }
 
         public string Name() {

@@ -5,16 +5,18 @@ namespace Lab2.Interfaces.ConsoleApp {
     static class Program {
         static void Main(string[] args) {
 
+            var output = new ConsoleOutput();
+
             var playbackOptions = new List<IPlayback> {
-                new AppleHeadset(),
-                new PhoneSpeaker(),
-                new SamsungHeadset(),
-                new UnofficialHeadset()
+                new AppleHeadset(output),
+                new PhoneSpeaker(output),
+                new SamsungHeadset(output),
+                new UnofficialHeadset(output)
             };
 
             var displayOptions = new List<IDisplay> {
-                new InbuiltDisplay(),
-                new CastDisplay()
+                new InbuiltDisplay(output),
+                new CastDisplay(output)
             };
 
             var playbackChoice = ChooseFromList("playback components", playbackOptions);

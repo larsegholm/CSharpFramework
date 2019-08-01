@@ -2,8 +2,16 @@
 
 namespace Lab2.Interfaces.ConsoleApp {
     public class InbuiltDisplay : IDisplay {
+
+        private readonly IOutput Output;
+
+        public InbuiltDisplay(IOutput output) {
+            Output = output;
+        }
+
+
         public void Display(object data) {
-            Console.WriteLine($"Displaying from {Name()}");
+            Output.WriteLine($"Displaying from {Name()}");
         }
 
         public string Name() {

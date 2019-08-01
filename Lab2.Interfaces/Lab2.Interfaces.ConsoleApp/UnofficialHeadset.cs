@@ -2,8 +2,15 @@
 
 namespace Lab2.Interfaces.ConsoleApp {
     public class UnofficialHeadset : IPlayback {
+
+        private readonly IOutput Output;
+
+        public UnofficialHeadset(IOutput output) {
+            Output = output;
+        }
+
         public void Play(object data) {
-            Console.WriteLine($"{nameof(UnofficialHeadset)} sound");
+            Output.WriteLine($"{nameof(UnofficialHeadset)} sound");
         }
 
         public string Name() {

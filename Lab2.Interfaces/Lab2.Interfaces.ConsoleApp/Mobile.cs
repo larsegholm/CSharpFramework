@@ -8,5 +8,8 @@
             PlaybackComponent.Play(data);
         }
 
+        public void Display(object data) {
+            DisplayComponent.Display(data);
+        }
     }
 }

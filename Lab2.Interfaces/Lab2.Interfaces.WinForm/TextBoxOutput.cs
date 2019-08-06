@@ -10,7 +10,7 @@ namespace Lab2.Interfaces.WinForm {
             TextBox = textBox;
             TextBox.Text = "";
         }
-        
+
         public void Write(string text) {
             TextBox.Text += text;
         }

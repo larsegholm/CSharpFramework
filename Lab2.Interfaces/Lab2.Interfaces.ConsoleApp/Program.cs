@@ -2,8 +2,8 @@
 using System.Collections.Generic;
 
 namespace Lab2.Interfaces.ConsoleApp {
-    static class Program {
-        static void Main(string[] args) {
+    internal static class Program {
+        private static void Main() {
 
             var output = new ConsoleOutput();
             var mobileOptions = new MobileOptions(output);
@@ -14,13 +14,14 @@ namespace Lab2.Interfaces.ConsoleApp {
             var displayChoice = displayOptions[ChooseFromList("display component", displayOptions, output)];
 
             output.WriteLine($"{ playbackChoice.Name()}, {displayChoice.Name()} selected.");
-                
+
             var mobile = new SimCorpMobile {
                 PlaybackComponent = playbackChoice,
                 DisplayComponent = displayChoice
             };
             mobile.Play("");
             mobile.Display("");
+            Console.ReadLine();
         }
 
         private static int ChooseFromList(string choicesTitle, IReadOnlyList<INamedClass> choices, IOutput output) {

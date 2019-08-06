@@ -7,7 +7,6 @@
             Output = output;
         }
 
-
         public void Display(object data) {
             Output.WriteLine($"Displaying from {Name()}");
         }

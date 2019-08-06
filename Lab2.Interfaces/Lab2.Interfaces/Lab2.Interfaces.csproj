@@ -49,7 +49,7 @@
     <Compile Include="IOutput.cs" />
     <Compile Include="IPlayback.cs" />
     <Compile Include="Mobile.cs" />
-    <Compile Include="MobileBuilder.cs" />
+    <Compile Include="MobileOptions.cs" />
     <Compile Include="PhoneSpeaker.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="SamsungHeadset.cs" />

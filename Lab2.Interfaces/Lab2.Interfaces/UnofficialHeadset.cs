@@ -1,6 +1,4 @@
-﻿using System;
-
-namespace Lab2.Interfaces.ConsoleApp {
+﻿namespace Lab2.Interfaces {
     public class UnofficialHeadset : IPlayback {
 
         private readonly IOutput Output;

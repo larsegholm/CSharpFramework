@@ -1,6 +1,4 @@
-﻿using System;
-
-namespace Lab2.Interfaces.ConsoleApp {
+﻿namespace Lab2.Interfaces {
     public class PhoneSpeaker : IPlayback {
 
         private readonly IOutput Output;

@@ -1,6 +1,5 @@
 ﻿using System;
 using System.Collections.Generic;
-using Lab2.Interfaces.ConsoleApp;
 
 namespace Lab2.Interfaces {
     public class MobileBuilder {

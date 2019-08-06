@@ -1,4 +1,4 @@
-﻿namespace Lab2.Interfaces.ConsoleApp {
+﻿namespace Lab2.Interfaces {
     public class SimCorpMobile : Mobile {
     }
 }

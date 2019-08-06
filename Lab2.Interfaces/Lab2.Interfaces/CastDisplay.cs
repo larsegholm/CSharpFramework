@@ -1,6 +1,4 @@
-﻿using System;
-
-namespace Lab2.Interfaces.ConsoleApp {
+﻿namespace Lab2.Interfaces {
     public class CastDisplay : IDisplay {
 
         private readonly IOutput Output;

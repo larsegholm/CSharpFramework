@@ -102,6 +102,8 @@
             this.Controls.Add(this.label1);
             this.Controls.Add(this.comboBox2);
             this.Controls.Add(this.comboBox1);
+            this.MaximizeBox = false;
+            this.MaximumSize = new System.Drawing.Size(378, 308);
             this.Name = "Form1";
             this.Text = "Lab2.Interfaces GUI application";
             this.ResumeLayout(false);

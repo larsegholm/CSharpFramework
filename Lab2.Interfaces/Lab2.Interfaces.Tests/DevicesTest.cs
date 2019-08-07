@@ -17,7 +17,7 @@ namespace Lab2.Interfaces.Tests {
         public void AppleHeadsetReturnsNameInNameMethod() {
             var appleHeadSet = new AppleHeadset(OutputMock.Object);
 
-            var name = appleHeadSet.Name();
+            var name = appleHeadSet.GetName();
 
             Assert.AreEqual(name, "AppleHeadset");
         }
@@ -28,14 +28,14 @@ namespace Lab2.Interfaces.Tests {
 
             appleHeadSet.Play("");
 
-            OutputMock.Verify(output => output.WriteLine(appleHeadSet.Name() + " sound"));
+            OutputMock.Verify(output => output.WriteLine(appleHeadSet.GetName() + " sound"));
         }
 
         [Test]
         public void CastDisplayReturnsNameInNameMethod() {
             var castDisplay = new CastDisplay(OutputMock.Object);
 
-            var name = castDisplay.Name();
+            var name = castDisplay.GetName();
 
             Assert.AreEqual(name, "CastDisplay");
         }
@@ -46,7 +46,7 @@ namespace Lab2.Interfaces.Tests {
 
             castDisplay.Display("");
 
-            OutputMock.Verify(output => output.WriteLine("Displaying from " + castDisplay.Name()));
+            OutputMock.Verify(output => output.WriteLine("Displaying from " + castDisplay.GetName()));
         }
 
 

@@ -13,7 +13,7 @@ namespace Lab2.Interfaces.ConsoleApp {
             var playbackChoice = playbackOptions[ChooseFromList("playback components", playbackOptions, output)];
             var displayChoice = displayOptions[ChooseFromList("display component", displayOptions, output)];
 
-            output.WriteLine($"{ playbackChoice.Name()}, {displayChoice.Name()} selected.");
+            output.WriteLine($"{ playbackChoice.GetName()}, {displayChoice.GetName()} selected.");
 
             var mobile = new SimCorpMobile {
                 PlaybackComponent = playbackChoice,
@@ -27,7 +27,7 @@ namespace Lab2.Interfaces.ConsoleApp {
         private static int ChooseFromList(string choicesTitle, IReadOnlyList<INamedClass> choices, IOutput output) {
             output.WriteLine($"Select {choicesTitle} index");
             for (var i = 0; i < choices.Count; i++) {
-                output.WriteLine($"{i}: {choices[i].Name()}");
+                output.WriteLine($"{i}: {choices[i].GetName()}");
             }
             var choice = Convert.ToInt32(Console.ReadLine());
             if (choice < 0 || choice >= choices.Count) {

@@ -8,9 +8,9 @@
         }
 
         public void Play(object data) {
-            Output.WriteLine($"{Name()} sound");
+            Output.WriteLine($"{GetName()} sound");
         }
-        public string Name() {
+        public string GetName() {
             return "SamsungHeadset";
         }
     }

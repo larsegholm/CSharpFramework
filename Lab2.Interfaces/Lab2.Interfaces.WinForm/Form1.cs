@@ -14,20 +14,20 @@ namespace Lab2.Interfaces.WinForm {
             MobileOptions = new MobileOptions(
                 new TextBoxOutput(OutputBox));
 
-            MobileOptions.PlaybackOptions.ForEach(opt => comboBox1.Items.Add(opt.Name()));
-            MobileOptions.DisplayOptions.ForEach(opt => comboBox2.Items.Add(opt.Name()));
+            MobileOptions.PlaybackOptions.ForEach(opt => comboBox1.Items.Add(opt.GetName()));
+            MobileOptions.DisplayOptions.ForEach(opt => comboBox2.Items.Add(opt.GetName()));
 
             Mobile = new SimCorpMobile();
         }
 
         private void ComboBox1_SelectedIndexChanged(object sender, EventArgs e) {
             Mobile.PlaybackComponent = MobileOptions.PlaybackOptions
-                .Single(opt => opt.Name() == (string)comboBox1.SelectedItem);
+                .Single(opt => opt.GetName() == (string)comboBox1.SelectedItem);
         }
 
         private void ComboBox2_SelectedIndexChanged(object sender, EventArgs e) {
             Mobile.DisplayComponent = MobileOptions.DisplayOptions
-                .Single(opt => opt.Name() == (string)comboBox2.SelectedItem); 
+                .Single(opt => opt.GetName() == (string)comboBox2.SelectedItem); 
         }
 
         private void Label1_Click(object sender, EventArgs e) {

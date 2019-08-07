@@ -11,7 +11,7 @@
             Output.WriteLine($"{nameof(UnofficialHeadset)} sound");
         }
 
-        public string Name() {
+        public string GetName() {
             return "UnofficialHeadset";
         }
     }

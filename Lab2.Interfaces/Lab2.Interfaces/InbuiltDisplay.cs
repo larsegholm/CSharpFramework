@@ -8,10 +8,10 @@
         }
 
         public void Display(object data) {
-            Output.WriteLine($"Displaying from {Name()}");
+            Output.WriteLine($"Displaying from {GetName()}");
         }
 
-        public string Name() {
+        public string GetName() {
             return "InbuiltDisplay";
         }
     }

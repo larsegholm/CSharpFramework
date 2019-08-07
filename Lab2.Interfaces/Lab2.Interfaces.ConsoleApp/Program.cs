@@ -29,7 +29,11 @@ namespace Lab2.Interfaces.ConsoleApp {
             for (var i = 0; i < choices.Count; i++) {
                 output.WriteLine($"{i}: {choices[i].Name()}");
             }
-            return Convert.ToInt32(Console.ReadLine());
+            var choice = Convert.ToInt32(Console.ReadLine());
+            if (choice < 0 || choice >= choices.Count) {
+                throw new IndexOutOfRangeException($"Bad input for {choicesTitle}. Got {choice}");
+            }
+            return choice;
         }
     }
 }

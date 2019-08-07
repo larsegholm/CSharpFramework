@@ -39,6 +39,12 @@ namespace Lab2.Interfaces.WinForm {
         }
 
         private void Button1_Click(object sender, EventArgs e) {
+            if (Mobile.DisplayComponent == null || Mobile.PlaybackComponent == null) {
+                OutputBox.Text = @"Please select audio and visual components";
+                return;
+            }
+
+            OutputBox.Text = string.Empty;
             Mobile.Play("");
             Mobile.Display("");
         }

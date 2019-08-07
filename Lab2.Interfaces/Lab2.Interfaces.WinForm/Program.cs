@@ -10,7 +10,7 @@ namespace Lab2.Interfaces.WinForm {
         private static void Main() {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new Form1());
+            Application.Run(new ComponentSelectionForm());
         }
     }
 }
